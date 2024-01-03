@@ -29,6 +29,13 @@
         <url>https://github.com/leangen/graphql-spqr-spring-boot-starter/issues</url>
     </issueManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>esc-common-java</id>
+            <url>https://pkgs.dev.azure.com/evolvingsystemsconsulting/_packaging/esc-common-java/maven/v1</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
