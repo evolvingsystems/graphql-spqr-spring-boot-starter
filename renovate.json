@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:allNonMajor",
+    "schedule:nonOfficeHours"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "additionalBranchPrefix": "{{datasource}}-",
+  "addLabels": [
+    "{{datasource}}"
+  ],
+  "commitBodyTable": true,
+  "updateNotScheduled": false,
+  "rebaseWhen": "behind-base-branch",
+  "packageRules": [
+    {
+      "matchCategories": [
+        "java"
+      ],
+      "description": "GraphQL Java (ignoring snapshot builds)",
+      "matchPackageNames": [
+        "com.graphql-java:graphql-java"
+      ],
+      "allowedVersions": "/^[0-9]+\\.[0-9]+(\\.[0-9]+)?$/"
+    },
+    {
+      "matchCategories": [
+        "java"
+      ],
+      "description": "GraphQL Java Annotations",
+      "matchPackageNames": [
+        "io.github.graphql-java:graphql-java-annotations"
+      ],
+      "allowedVersions": "/^[0-9]+\\.[0-9]+\\.[0-9]+?$/"
+    }
+  ]
+}

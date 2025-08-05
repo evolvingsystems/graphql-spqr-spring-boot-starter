@@ -3,7 +3,7 @@
 
     <groupId>io.leangen.graphql</groupId>
     <artifactId>graphql-spqr-spring-boot-starter-parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2.1-esc-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <inceptionYear>2018</inceptionYear>
@@ -19,20 +19,16 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/leangen/graphql-spqr-spring-boot-starter</connection>
-        <developerConnection>scm:git:git://github.com/leangen/graphql-spqr-spring-boot-starter</developerConnection>
-        <url>https://github.com/leangen/graphql-spqr-spring-boot-starter</url>
+        <connection>scm:git:https://github.com/evolvingsystems/graphql-spqr-spring-boot-starter</connection>
+        <developerConnection>scm:git:https://github.com/evolvingsystems/graphql-spqr-spring-boot-starter</developerConnection>
+        <url>https://github.com/evolvingsystems/graphql-spqr-spring-boot-starter</url>
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>esc-common-java</id>
+            <url>https://pkgs.dev.azure.com/evolvingsystemsconsulting/_packaging/esc-common-java/maven/v1</url>
         </repository>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
     <issueManagement>
         <system>GitHub Issue Tracking</system>
@@ -43,7 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
 
-        <spqr.version>0.12.4</spqr.version>
+        <spqr.version>0.12.5.2-esc</spqr.version>
         <spring-boot.version>3.2.1</spring-boot.version>
     </properties>
 
@@ -131,24 +127,6 @@
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.1.0</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <useAgent>true</useAgent>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
                         <version>3.3.0</version>
                         <executions>
@@ -183,17 +161,6 @@
                         </configuration>
                     </plugin>
 
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.13</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
