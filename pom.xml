@@ -40,7 +40,7 @@
         <java.version>17</java.version>
 
         <spqr.version>0.12.5.2-esc</spqr.version>
-        <spring-boot.version>3.2.1</spring-boot.version>
+        <spring-boot.version>3.5.4</spring-boot.version>
     </properties>
 
     <modules>
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>com.graphql-java</groupId>
                 <artifactId>graphql-java</artifactId>
-                <version>21.3</version>
+                <version>21.5</version>
             </dependency>
 
             <dependency>
@@ -91,7 +91,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.12.1</version>
+                    <version>3.14.0</version>
                     <configuration>
                         <release>${java.version}</release>
                         <parameters>true</parameters>
@@ -101,7 +101,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.1</version>
                     <configuration>
                         <goals>deploy</goals>
                         <useReleaseProfile>false</useReleaseProfile>
@@ -122,13 +122,13 @@
                     <plugin>
                         <inherited>true</inherited>
                         <artifactId>maven-deploy-plugin</artifactId>
-                        <version>3.1.1</version>
+                        <version>3.1.4</version>
                     </plugin>
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>3.3.0</version>
+                        <version>3.3.1</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -142,7 +142,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.6.3</version>
+                        <version>3.11.2</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
