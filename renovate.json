@@ -36,5 +36,13 @@
       ],
       "allowedVersions": "/^[0-9]+\\.[0-9]+\\.[0-9]+?$/"
     }
+  ],
+  "hostRules": [
+    {
+      "hostType": "maven",
+      "matchHost": "https://pkgs.dev.azure.com/evolvingsystemsconsulting/_packaging/esc-common-java/maven/v1",
+      "username": "evolvingsystemsconsulting",
+      "password": "{{ secrets.DEVOPS_FEED_TOKEN }}"
+    }
   ]
 }

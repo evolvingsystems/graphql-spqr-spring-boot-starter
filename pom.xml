@@ -85,6 +85,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>esc-common-java</id>
+            <url>https://pkgs.dev.azure.com/evolvingsystemsconsulting/_packaging/esc-common-java/maven/v1</url>
+        </repository>
+    </repositories>
+
     <build>
         <pluginManagement>
             <plugins>
