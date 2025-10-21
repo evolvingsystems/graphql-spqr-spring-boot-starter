@@ -39,8 +39,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
 
-        <spqr.version>0.12.5.3-esc</spqr.version>
-        <spring-boot.version>3.5.5</spring-boot.version>
+        <spqr.version>0.12.5.4-esc</spqr.version>
+        <spring-boot.version>3.5.6</spring-boot.version>
     </properties>
 
     <modules>
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>com.graphql-java</groupId>
                 <artifactId>graphql-java</artifactId>
-                <version>24.2</version>
+                <version>24.3</version>
             </dependency>
 
             <dependency>
@@ -104,7 +104,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.14.0</version>
+                    <version>3.14.1</version>
                     <configuration>
                         <release>${java.version}</release>
                         <parameters>true</parameters>
@@ -169,7 +169,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.11.3</version>
+                        <version>3.12.0</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
