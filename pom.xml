@@ -40,7 +40,7 @@
         <java.version>17</java.version>
 
         <spqr.version>0.25.5.7-esc</spqr.version>
-        <spring-boot.version>4.1.1</spring-boot.version>
+        <spring-boot.version>4.1.2</spring-boot.version>
     </properties>
 
     <modules>
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>com.graphql-java</groupId>
                 <artifactId>graphql-java</artifactId>
-                <version>26.1</version>
+                <version>26.2</version>
             </dependency>
 
             <dependency>
